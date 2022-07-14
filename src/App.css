@@ -1,38 +1,344 @@
-.App {
+/* -------------------------------------- */
+/* ---            General            ---  */
+/* -------------------------------------- */
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  background: #002b53;
+}
+
+a {
+  color: #002b53;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #002b53;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway', sans-serif;
+}
+
+
+/* -------------------------------------- */
+/* ---      BACK TO TOP BUTTON       ---  */
+/* -------------------------------------- */
+
+
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #002b53;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #002b53;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* -------------------------------------- */
+/* ---             HEADER            ---  */
+/* -------------------------------------- */
+
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  transition: all ease-in-out 0.5s;
+  z-index: 9997;
+  transition: all 0.5s;
+  padding: 0 15px;
+  background-image: url('./assets/banner.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: auto;
+}
+
+.header .profile img {
+  margin: 35px auto;
+  display: block;
+  width: 150px;
+  border: 8px solid #006ed5;
+}
+
+.header .profile h1 {
+  font-size: 28px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-weight: 700;
+  -moz-text-align-last: center;
+  text-align-last: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header .profile h1 a,
+.header .profile h1 a:hover {
+  color: #002b53;
+  text-decoration: none;
+}
+
+.header .powell {
+  margin-left: 5px;
+  color: #f87630;
+}
+
+.header .profile .social-links a {
+  font-size: 20px;
+  display: inline-block;
+  background: #212431;
+  color: #fff;
+  line-height: 1;
+  margin-top: 15px;
+  padding: 8px 0;
+  margin-right: 30px;
+  margin-left: 20px;
+  border-radius: 50%;
   text-align: center;
+  width: 40px;
+  height: 40px;
+  transition: 0.3s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header .profile .social-links a:hover {
+  background: #002b53;
+  color: #f87640;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.main {
+  margin-left: 300px;
+}
+
+@media (max-width: 1199px) {
+  .header {
+    left: -300px;
+  }
+
+  .main {
+    margin-left: 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+/* -------------------------------------- */
+/* ---          NAVIGATION           ---  */
+/* -------------------------------------- */
+
+
+.nav-menu {
+  padding: 30px 0 0 25px;
+  margin-top: 35px;
+  font-size: 22px;
+}
+
+.nav-menu * {
+  margin: 0;
+  padding: 25px;
+  list-style: none;
+  text-decoration: none !important;
+}
+
+.nav-menu>ul>li {
+  position: relative;
+  white-space: nowrap;
+  color: #002b53;
+}
+
+.nav-menu a,
+.nav-menu a:focus {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: #002b53;
+  padding: 12px 15px;
+  transition: 0.3s;
+  font-size: 22px;
+}
+
+.nav-menu a i, .nav-menu li, .nav-menu Link,
+.nav-menu a:focus i {
+  font-size: 32px;
+  padding-right: 10px;
+  color: #002b53;
+
+}
+
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover>a {
+  text-decoration: none;
+  color: #002b53;
+}
+
+
+/* -------------------------------------- */
+/* ---        HOME SECTION           ---  */
+/* -------------------------------------- */
+
+
+.home {
+  width: 100%;
+  height: 100vh;
+  background: url('./assets/splash.jpg');
+  background-size: cover;
+}
+
+.home:before {
+  content: '';
+  background: rgba(5, 13, 24, 0.3);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.home .home-container {
+  position: relative;
+  z-index: 2;
+  min-width: 325px;
+}
+
+.home h1 {
+  margin: -250px 0 10px -40px;
+  padding: 5px;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 80px;
+  color: #fff;
+}
+
+.home p {
+  color: #fff;
+  margin-left: -40px;
+  margin-bottom: 20px;
+
+  font-size: 26px;
+  font-family: 'Poppins', sans-serif;
+  border-bottom: 3px solid #f87630;
+}
+
+.home p span {
+  color: #fff;
+  padding-bottom: 4px;
+  letter-spacing: 1px;
+}
+
+.button {
+  display: flex;
+  float: right;
+  background-color: #002b53;
+  font-family: 'Poppins', sans-serif;
   color: white;
+  box-shadow: 2px 3px 3px #f876306c;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 5px 45px;
+  cursor: pointer;
+  border-radius: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.home .button:hover {
+  background-color: #f87630;
+  color: white;
+  box-shadow: 2px 3px 3px #002b5380;
+  transition: 0.5s ease-in-out;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 1024px) {
+  .home {
+    background-attachment: fixed;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 768px) {
+  .home h1 {
+    font-size: 28px;
+    line-height: 36px;
   }
+
+  .home h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+.section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background: #f5f8fd;
+}
+
+.section-title {
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #002b53;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #002b53;
+  bottom: 0;
+  left: 0;
+}
+
+.section-title p {
+  margin-bottom: 0;
 }
