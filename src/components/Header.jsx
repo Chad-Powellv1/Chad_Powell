@@ -39,17 +39,17 @@ export const Header = () => {
                     <nav className='navbar nav-menu'>
                         <ul>
                             <li>
-                                <Link to='#home' className='nav-link scrollto active'>
+                                <Link to='/' className='nav-link scrollto active'>
                                     Home
                                 </Link>
                             </li>
                             <li>
-                                <Link to='#about' className='nav-link scrollto'>
+                                <Link to='/about' className='nav-link scrollto'>
                                     About
                                 </Link>
                             </li>
                             <li>
-                                <Link to='#projects' className='nav-link scrollto'>
+                                <Link to='/projects' className='nav-link scrollto'>
                                     Portfolio
                                 </Link>
                             </li>
